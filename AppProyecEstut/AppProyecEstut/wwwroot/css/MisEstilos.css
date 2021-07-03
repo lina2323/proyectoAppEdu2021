@@ -1,0 +1,181 @@
+
+/*
+esta es la hoja de estilos cuando se crean por clases la antecede un punto el fomarmato es el siguiente
+.nombreEstilo {
+-- las propiedades 
+}
+*/
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.estiloBody {
+font-family: 'Roboto', sans-serif;
+display: flex;  
+flex-direction: column;
+align-items: center;
+
+}
+
+.contenedor100 {
+width: 100%;
+background-color: white;
+padding: 15px 25px 15px 25px;
+border-radius: 5px;
+border: 1px solid #000000;
+}
+
+.contenedor50 {
+width: 50%;
+background-color: white;
+padding: 15px 25px 15px 25px;
+border-radius: 5px;
+border: 1px solid #000000;
+}
+
+.contenedor40 {
+width: 40%;
+background-color: white;
+padding: 15px 25px 15px 25px;
+border-radius: 5px;
+border: 1px solid #000000;
+}
+
+.contenedor30 {
+width: 30%;
+background-color: white;
+padding: 15px 25px 15px 25px;
+border-radius: 5px;
+border: 1px solid #000000;
+}
+
+/* Estilos para el header*/
+
+.estiloHeader {
+background-color: rgb(255, 255, 255);
+width: 90% ;
+padding: 5px;
+margin-top: 25px;
+
+
+
+border-radius: 5px;
+border: 1px solid #000000;
+}
+
+.contenedorLogo {
+width: 50px;
+background-color: rgb(255, 255, 255);
+}
+
+.imgLogo {
+width: 80px;
+}
+
+.estiloUl {
+display: flex;
+}
+
+.esiloLi {
+padding: 5px 10px 5px 10px;
+margin: 20px;
+background-color: rgb(4, 129, 167);
+list-style: none;
+border-radius: 5px;
+border: 1px solid #c2cfcf;
+}
+
+.estiloLink {
+text-decoration: none;
+font-size: medium;
+font-weight: 500;
+color: white;
+}
+
+.esiloLi:hover {
+background-color: #888787;
+}
+
+
+/* Estilos para el main*/
+
+.estiloMain {
+background-color: rgb(255, 255, 255);
+width: 80%;
+padding: 10px;
+margin: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-radius: 5px;
+min-height: 400px;
+}
+
+.estiloH1 {
+font-size: medium;
+font-weight: 500;
+margin: 15px;
+text-align: center;
+}
+
+.estiloTextos {
+font-size: larger;
+font-weight: 100;
+
+}
+
+.estiloSeccion {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content:space-around;
+
+
+}
+
+
+.contenedorImgPrincipal {
+width: 100%;
+
+
+
+}
+
+.contenedorTxtPrincipal {
+width:90%;   
+}
+
+.ImgPrincipal {
+width: 100%;
+
+}
+
+/* Estilos para el footer*/
+
+.estiloFooter {
+background-color: rgb(255, 255, 255);
+width: 90%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 5px;
+
+border-radius: 5px;
+border: 1px solid #000000;
+
+}
+
+.imgIco {
+width: 35px;
+}
+
+.contenedorGitGub {
+display: flex;
+align-items: center;
+}
+
+
+

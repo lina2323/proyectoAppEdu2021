@@ -1,0 +1,92 @@
+﻿
+@model AppProyecEstut.Models.Estudiantes
+@{
+    ViewData["Title"] = "Crear";
+
+    List<Roles> nLista = ViewBag.Roles;
+
+}
+
+<h2 class="text-center m-2">  Crear un Estudiante </h2>
+
+<div class="col-12 bg-Success d-flex flex-column align-items-center flex-md-row flex-lg-row justify-content-md-center justify-content-lg-center align-items-ad-start align-items-lg-start">
+
+    <div class="col-12 col-md-6 col-lg-3 bg-white p-5 border rounded m-2 d-flex align-items-center justify-content-start">
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" asp-action="Index">ir a lista</a>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-8 bg-white p-3 border rounded m-2">
+
+        <form asp-action="Crear" class="row g-3">
+
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <label class="form-label">Codigo</label>
+                    <input asp-for="Codigo" type="text" class="form-control" required placeholder="0000">
+                    <span class="bg-warning text-dark">   @ViewData["msj"] </span>
+                </div>
+
+                <div class="col-md-6">
+                    <select asp-for="Rol" class="form-select" aria-label="Default select example">
+                        <option selected>Escoja el Rol</option>
+                        @foreach (var rol in nLista)
+                        {
+                            <option value="@rol.Rol">rol.Rol</option>
+                        }
+
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <label class="form-label">Nombre Usuario</label>
+                    <input asp-for="Nombre" type="text" class="form-control" required placeholder="Nombre Apellido">
+
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Correo</label>
+                    <input asp-for="Correo" type="email" class="form-control" required placeholder="usuario@dominio">
+                    <div class="invalid-feedback">
+                        Please choose a username.
+                    </div>
+                </div>
+
+                 <div class="col-md-6">
+                    <label class="form-label">Nota1</label>
+                    <input asp-for="Nota1" type="text" class="form-control" required placeholder="0000">
+                    <span class="bg-warning text-dark">   @ViewData["msj"] </span>
+                </div>
+
+                 <div class="col-md-6">
+                    <label class="form-label">Nota2</label>
+                    <input asp-for="Nota2" type="text" class="form-control" required placeholder="0000">
+                    <span class="bg-warning text-dark">   @ViewData["msj"] </span>
+                </div>
+
+                 <div class="col-md-6">
+                    <label class="form-label">Nota3</label>
+                    <input asp-for="Nota3" type="text" class="form-control" required placeholder="0000">
+                    <span class="bg-warning text-dark">   @ViewData["msj"] </span>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar Datos</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+

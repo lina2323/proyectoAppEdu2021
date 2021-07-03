@@ -1,0 +1,101 @@
+﻿
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link real="stylesheet" href="~/css/MisEstilos.css">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>@ViewData["Title"] App Educativa</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index"> </a><div class="contenedorLogo">
+    <img class="imglogo" src="./pic/Imagenlog1.png" alt="" />
+</div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link" asp-controller="Home" asp-action="QuienesSomos">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Actividades">Actividades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Contactenos">Contactenos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Estudiantes" asp-action="Index">Estudiantes</a>
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Privado">Privado</a>
+                            </li>
+                        }
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Logout">Cerrar Sesion</a>
+
+                            </li>
+                        }
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                            
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="" asp-action="Welcome">Inicie Sesion</a>
+
+                        </li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="bg-white">
+        <div class="container">
+
+            @RenderBody()
+
+        </div>
+    </main>
+
+    <footer class="text-white-50 bg-dark p-3 d-flex justify-content-center ">
+        <div class="d-flex align-items-center">
+            <div><img class="ico m-auto" src="" alt=""></div>
+            <div class="d-flex flex-column">
+                <small> By Lina Marcela Correcha </small>
+                <a href="#" class="link-light">Lcorrechasena</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
